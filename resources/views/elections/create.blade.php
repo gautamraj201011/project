@@ -6,40 +6,37 @@
 @endsection
 
 @section('content')
-    <h1 font="bold">Create Election</h1>
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     {!! Form::open(
       array(
         'route' => 'elections.store',
         'class' => 'form')
       ) !!}
-
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            There were some problems adding the category.<br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li></li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
     <div class="form-group">
         {!! Form::label('Year') !!}
-        {!! Form::selectRange('number', 2016, 2050)!!}
+        {!! Form::selectRange('year', 2016, 2050)!!}
 
         {!! Form::label('Type') !!}
-        {!! Form::select('status', array('State','Union'),'state') !!}
+        {!! Form::select('status', array('State'=> 'STATE' ,'Union' =>'UNION')) !!}
 
         {!! Form::label('State') !!}
-        {!! Form::select('state', array('Bihar','Wb','Odisa'),'state') !!} </div>
+        {!! Form::select('state', array('Bihar'=>'Bihar','wb'=>'Wb','Odisa'=>'Odisa')) !!} </div><br/>
     <div class="form-group">
         {!! Form::label('Start') !!}
         {!! Form::text('start', null,
           array(
             'class'=>'form-control',
-            'placeholder'=>'YYYY-MM-DD'
+            'placeholder'=>'YYYY-MM-DD',
+            'provider'=> 'Makzumi\Calendar\CalendarServiceProvider',
           )) !!}</div><br/>
     <div class="form-group">
         {!! Form::label('End') !!}

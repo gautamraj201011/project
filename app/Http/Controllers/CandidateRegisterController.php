@@ -30,9 +30,6 @@ class CandidateRegisterController extends Controller
                 'electionid' => 'required',
                 'constituencyid' => 'required',
                 'partyid' => 'required',
-
-
-
             ]);
 
             $candidate = new CandidateDetail();
@@ -43,10 +40,11 @@ class CandidateRegisterController extends Controller
             $candidate->partyid = $request->get('partyid');
             $candidate->save();
             return view('candidate.show', compact('candidate'));
-        }catch (\Exception $e) {
-            Session::flash('message', 'ID doesnt exist');
+            }catch (\Exception $e)
+            {
+            Session::flash('message', 'Invalid Input, Try Again');
             Session::flash('alert-class', 'alert-danger');
-            return Redirect::to('http://localhost/project/public/candidate/create')->with('msg', ' Sorry something went worng. Please try again.');
-        }
-        }
+            return Redirect::to('http://localhost/project/public/candidate/create');
+            }
+    }
 }
