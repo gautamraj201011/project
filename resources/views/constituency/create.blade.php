@@ -38,7 +38,7 @@
 
     <div class="form-group">
         {!! Form::label('Constituency Id   &nbsp;') !!}
-        {!! Form::text('constituencyname', $cons->constituencyname,
+        {!! Form::text('constituencyid', $app->constituencyid ,
           array(
             'class'=>'form-control',
             'placeholder'=>'name'

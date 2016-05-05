@@ -31,11 +31,7 @@ class ConstituencyController extends Controller
             $users=DB::table('block_details')->where('blockid',$names+1)->first();
             $blocks->block =$users->block;
             $blocks->save();
-
-
-
+            return view('constituency.show', compact('blocks'));
         }
-
-
     }
 }

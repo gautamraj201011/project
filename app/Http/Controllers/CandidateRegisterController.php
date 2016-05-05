@@ -25,7 +25,7 @@ class CandidateRegisterController extends Controller
         try {
 
             $this->validate($request, [
-                'candidateid' => 'bail|required|unique:posts|max:255',
+                'candidateid' => 'bail|required',
                 'candidatename' => 'required',
                 'electionid' => 'required',
                 'constituencyid' => 'required',
