@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2016 at 05:40 PM
+-- Generation Time: May 06, 2016 at 03:00 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 5.6.19
 
@@ -40,12 +40,26 @@ CREATE TABLE `block_details` (
 --
 
 INSERT INTO `block_details` (`blockid`, `state`, `stateid`, `block`, `created_at`, `updated_at`) VALUES
-(1, 'bihar', 1, 'islampur', NULL, NULL),
-(2, 'bihar', 1, 'hilsa', NULL, NULL),
-(3, 'bihar', 1, 'ekangersarai', NULL, NULL),
-(4, 'bihar', 1, 'rajgir', NULL, NULL),
-(5, 'bihar', 1, 'biharsharif', NULL, NULL),
-(6, 'bihar', 1, 'fatuhan', NULL, NULL);
+(1, 'Bihar', 1, 'siwan', NULL, NULL),
+(2, 'Bihar', 1, 'araria', NULL, NULL),
+(3, 'Bihar', 1, 'islampur', NULL, NULL),
+(4, 'Bihar', 1, 'nalanda', NULL, NULL),
+(5, 'Bihar', 1, 'jagdishpur', NULL, NULL),
+(6, 'Bihar', 1, 'silkat', NULL, NULL),
+(7, 'Bihar', 1, 'katihar', NULL, NULL),
+(8, 'Bihar', 1, 'kumraw', NULL, NULL),
+(9, 'Bihar', 1, 'hajipur', NULL, NULL),
+(10, 'Bihar', 1, 'patna', NULL, NULL),
+(11, 'west Bengal', 2, 'alipurduar', NULL, NULL),
+(12, 'west Bengal', 2, 'bankura', NULL, NULL),
+(13, 'west Bengal', 2, 'bardhaman', NULL, NULL),
+(14, 'west Bengal', 3, 'birbhum', NULL, NULL),
+(15, 'west Bengal', 2, 'coochbehar', NULL, NULL),
+(16, 'west Bengal', 2, 'darjelling', NULL, NULL),
+(17, 'west Bengal', 2, 'hooghly', NULL, NULL),
+(18, 'west Bengal', 2, 'howrah', NULL, NULL),
+(19, 'west Bengal', 2, 'jalpaiguri', NULL, NULL),
+(20, 'west Bengal', 2, 'malda', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -69,13 +83,21 @@ CREATE TABLE `candidate_details` (
 --
 
 INSERT INTO `candidate_details` (`candidateid`, `candidatename`, `electionid`, `constituencyid`, `partyid`, `vote`, `created_at`, `updated_at`) VALUES
-(1, 'manoj', 1, 1, 1, 2, NULL, NULL),
-(2, 'manu', 1, 1, 2, 5, NULL, NULL),
-(3, 'mani', 1, 2, 2, 2, NULL, NULL),
-(4, 'maniK', 1, 2, 3, 2, NULL, NULL),
-(5, 'sanoj', 1, 3, 3, 0, NULL, NULL),
-(6, 'pankaj', 1, 3, 4, 1, '2016-04-18 12:33:41', '2016-04-18 12:33:41'),
-(7, 'rupesh', 1, 3, 5, 0, '2016-04-19 04:22:56', '2016-04-19 04:22:56');
+(1, 'Raja Ram Mohan Singh', 1, 1, 1, 0, '2016-05-06 07:15:17', '2016-05-06 07:15:17'),
+(6, 'Kejriwal', 1, 2, 1, 0, '2016-05-06 07:16:50', '2016-05-06 07:16:50'),
+(10, 'Alok', 1, 3, 1, 0, '2016-05-06 07:17:55', '2016-05-06 07:17:55'),
+(2, 'Mahatma Gandhi', 1, 1, 2, 0, '2016-05-06 07:15:34', '2016-05-06 07:15:34'),
+(7, 'Kumar Vishwas', 1, 2, 2, 0, '2016-05-06 07:17:10', '2016-05-06 07:17:10'),
+(12, 'Manish', 1, 4, 2, 0, '2016-05-06 07:18:42', '2016-05-06 07:18:42'),
+(3, 'Jawahar Lal', 1, 1, 3, 0, '2016-05-06 07:15:57', '2016-05-06 07:15:57'),
+(8, 'Saurabh', 1, 2, 3, 0, '2016-05-06 07:17:26', '2016-05-06 07:17:26'),
+(11, 'Bittu', 1, 3, 3, 0, '2016-05-06 07:18:13', '2016-05-06 07:18:13'),
+(4, 'Sonia', 1, 1, 4, 2, '2016-05-06 07:16:16', '2016-05-06 07:16:16'),
+(9, 'Shubham', 1, 2, 4, 0, '2016-05-06 07:17:40', '2016-05-06 07:17:40'),
+(13, 'Vishal', 1, 4, 4, 0, '2016-05-06 07:18:59', '2016-05-06 07:18:59'),
+(5, 'Modi', 1, 1, 5, 3, '2016-05-06 07:16:33', '2016-05-06 07:16:33'),
+(14, 'Gautam', 1, 4, 5, 0, '2016-05-06 07:19:19', '2016-05-06 07:19:19'),
+(100, 'Gautam', 1, 1, 7, 0, '2016-05-06 04:50:53', '2016-05-06 04:50:53');
 
 -- --------------------------------------------------------
 
@@ -97,12 +119,18 @@ CREATE TABLE `constituency_block_details` (
 --
 
 INSERT INTO `constituency_block_details` (`id`, `electionid`, `constituencyid`, `block`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'islampur', NULL, NULL),
-(2, 1, 1, 'hilsa', NULL, NULL),
-(3, 1, 2, 'ekangersarai', NULL, NULL),
-(4, 1, 2, 'rajgir', NULL, NULL),
-(5, 1, 3, 'biharsharif', NULL, NULL),
-(6, 1, 3, 'fatuhan', NULL, NULL);
+(1, 1, 1, 'siwan', '2016-05-06 07:05:34', '2016-05-06 07:05:34'),
+(2, 1, 1, 'araria', '2016-05-06 07:05:34', '2016-05-06 07:05:34'),
+(3, 1, 2, 'islampur', '2016-05-06 07:13:00', '2016-05-06 07:13:00'),
+(4, 1, 2, 'nalanda', '2016-05-06 07:13:01', '2016-05-06 07:13:01'),
+(5, 1, 2, 'jagdishpur', '2016-05-06 07:13:01', '2016-05-06 07:13:01'),
+(6, 1, 3, 'silkat', '2016-05-06 07:13:55', '2016-05-06 07:13:55'),
+(7, 1, 3, 'katihar', '2016-05-06 07:13:55', '2016-05-06 07:13:55'),
+(8, 1, 3, 'kumraw', '2016-05-06 07:13:55', '2016-05-06 07:13:55'),
+(9, 1, 3, 'hajipur', '2016-05-06 07:13:55', '2016-05-06 07:13:55'),
+(10, 1, 4, 'patna', '2016-05-06 07:14:12', '2016-05-06 07:14:12'),
+(11, 1, 5, 'siwan', '2016-05-06 04:53:13', '2016-05-06 04:53:13'),
+(12, 1, 5, 'araria', '2016-05-06 04:53:13', '2016-05-06 04:53:13');
 
 -- --------------------------------------------------------
 
@@ -123,9 +151,11 @@ CREATE TABLE `constituency_details` (
 --
 
 INSERT INTO `constituency_details` (`constituencyid`, `constituencyname`, `electionid`, `created_at`, `updated_at`) VALUES
-(1, 'nalanda', 1, NULL, NULL),
-(2, 'gaya', 1, NULL, NULL),
-(3, 'patliputra', 1, NULL, NULL);
+(1, 'araria', 1, '2016-05-06 07:05:34', '2016-05-06 07:05:34'),
+(2, 'islampur', 1, '2016-05-06 07:13:00', '2016-05-06 07:13:00'),
+(3, 'hajipur', 1, '2016-05-06 07:13:55', '2016-05-06 07:13:55'),
+(4, 'patna', 1, '2016-05-06 07:14:12', '2016-05-06 07:14:12'),
+(5, 'Howrah', 1, '2016-05-06 04:53:13', '2016-05-06 04:53:13');
 
 -- --------------------------------------------------------
 
@@ -149,10 +179,14 @@ CREATE TABLE `elections` (
 --
 
 INSERT INTO `elections` (`electionid`, `year`, `status`, `state`, `start`, `end`, `created_at`, `updated_at`) VALUES
-(1, 2016, 'state', 'bihar', '2016-04-05', '2016-04-07', NULL, NULL),
-(2, 2017, 'state', 'West Bengal', '2017-04-16', '2017-05-16', '2016-04-18 12:46:55', '2016-04-18 12:46:55'),
-(3, 2021, 'state', 'punjab', '2017-05-16', '2017-06-22', '2016-04-18 12:51:56', '2016-04-18 12:51:56'),
-(6, 2019, 'state', 'Odisha', '2017-04-16', '2017-05-16', '2016-04-19 04:21:34', '2016-04-19 04:21:34');
+(1, 2016, 'State', 'Bihar', '2016-05-07', '2016-05-10', '2016-05-06 07:01:54', '2016-05-06 07:01:54'),
+(14, 2016, 'State', 'West Bengal', '2016-05-11', '2016-05-13', '2016-05-06 03:15:36', '2016-05-06 03:15:36'),
+(15, 2016, 'State', 'Bihar', '2016-05-11', '2016-05-13', '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(16, 2016, 'State', 'West Bengal', '2016-05-11', '2016-05-13', '2016-05-06 03:42:12', '2016-05-06 03:42:12'),
+(17, 2016, 'State', 'West Bengal', '2017-04-16', '2018-11-11', '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(18, 2016, 'State', 'West Bengal', '2016-05-11', '2016-05-13', '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(19, 2016, 'State', 'West Bengal', '2016-05-11', '2016-05-13', '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(20, 2016, 'State', 'West Bengal', '2016-05-11', '2016-05-13', '2016-05-06 07:24:43', '2016-05-06 07:24:43');
 
 -- --------------------------------------------------------
 
@@ -180,8 +214,7 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2016_04_15_170740_create_candidate_details_table', 7),
 ('2016_04_15_203511_create_voter_details_table', 8),
 ('2016_04_16_072429_create_voting_statuses_table', 9),
-('2016_04_21_100345_create_voting_statuses_table', 10),
-('2016_04_21_101014_create_voting_statuses_table', 11);
+('2016_04_21_100345_create_voting_statuses_table', 10);
 
 -- --------------------------------------------------------
 
@@ -202,15 +235,13 @@ CREATE TABLE `parties` (
 --
 
 INSERT INTO `parties` (`partyid`, `partyname`, `partysymbol`, `created_at`, `updated_at`) VALUES
-(1, 'bjp', 'lotus', NULL, NULL),
-(2, 'rjd', 'lalten', NULL, NULL),
-(3, 'ljp', 'hut', NULL, NULL),
-(4, 'congress', 'palm', NULL, NULL),
-(5, 'TMC', 'Flower', '2016-04-18 10:57:59', '2016-04-18 10:57:59'),
-(6, 'CPM', 'Hathoda', '2016-04-18 11:00:14', '2016-04-18 11:00:14'),
-(7, 'AAP', 'Jhadu', '2016-04-18 11:02:55', '2016-04-18 11:02:55'),
-(8, 'SP', 'Cycle', '2016-04-18 11:13:13', '2016-04-18 11:13:13'),
-(10, 'SPP', 'EGG', '2016-04-19 05:04:17', '2016-04-19 05:04:17');
+(1, 'BJP', 'lotus', '2016-05-06 06:27:48', '2016-05-06 06:27:48'),
+(2, 'INC', 'hand', '2016-05-06 06:28:51', '2016-05-06 06:28:51'),
+(3, 'BSP', 'elephant', '2016-05-06 06:29:13', '2016-05-06 06:29:13'),
+(4, 'RJD', 'lantern', '2016-05-06 06:29:44', '2016-05-06 06:29:44'),
+(5, 'LJP', 'hut', '2016-05-06 06:30:04', '2016-05-06 06:30:04'),
+(6, 'SSP', 'fan', '2016-05-06 02:29:30', '2016-05-06 02:29:30'),
+(7, 'BSSP', 'Lamb', '2016-05-06 04:50:24', '2016-05-06 04:50:24');
 
 -- --------------------------------------------------------
 
@@ -261,21 +292,22 @@ CREATE TABLE `voter_details` (
 --
 
 INSERT INTO `voter_details` (`voterid`, `votername`, `dob`, `state`, `block`, `created_at`, `updated_at`) VALUES
-(1, 'ramadheer', '1991-03-18', 'bihar', 'islampur', NULL, NULL),
-(2, 'manoj', '1996-04-13', 'bihar', 'islampur', NULL, NULL),
-(3, 'pankaj', '1996-07-13', 'bihar', 'hilsa', NULL, NULL),
-(4, 'shalu', '1994-07-13', 'bihar', 'rajgir', NULL, NULL),
-(5, 'sonu', '1994-07-10', 'bihar', 'biharsharif', NULL, NULL),
-(6, 'saurav', '1990-07-10', 'bihar', 'hilsa', NULL, NULL),
-(7, 'sanjeev', '1996-07-10', 'bihar', 'ekangersarai', NULL, NULL),
-(8, 'sanju', '1988-07-10', 'bihar', 'fatuhan', NULL, NULL),
-(9, 'manjeet', '1978-10-10', 'West Bengal', 'Asansol', '2016-04-18 13:18:38', '2016-04-18 13:18:38'),
-(10, 'manjeet', '1978-10-10', 'West Bengal', 'Asansol', '2016-04-18 13:19:34', '2016-04-18 13:19:34'),
-(11, 'manjeet', '1978-10-10', 'West Bengal', 'Asansol', '2016-04-18 13:23:52', '2016-04-18 13:23:52'),
-(12, 'manjeet', '1978-10-10', 'West Bengal', 'Asansol', '2016-04-18 13:24:49', '2016-04-18 13:24:49'),
-(13, 'manjeet', '1978-10-10', 'West Bengal', 'Asansol', '2016-04-18 13:25:07', '2016-04-18 13:25:07'),
-(14, 'Sohini', '1978-08-09', 'West Bengal', 'Asansol', '2016-04-18 14:46:19', '2016-04-18 14:46:19'),
-(15, 'gautam', '1992-11-02', 'bihar', 'islampur', '2016-04-19 04:23:43', '2016-04-19 04:23:43');
+(1, 'Himanshu', '1994-02-02', 'Bihar', 'siwan', '2016-05-06 06:49:45', '2016-05-06 06:49:45'),
+(2, 'Gautam', '1994-01-01', 'Bihar', 'siwan', '2016-05-06 06:50:19', '2016-05-06 06:50:19'),
+(3, 'Raj', '1992-01-01', 'Bihar', 'siwan', '2016-05-06 06:50:42', '2016-05-06 06:50:42'),
+(4, 'Piyush', '1990-01-01', 'Bihar', 'araria', '2016-05-06 06:51:16', '2016-05-06 06:51:16'),
+(5, 'Anand', '1990-02-02', 'Bihar', 'araria', '2016-05-06 06:51:40', '2016-05-06 06:51:40'),
+(6, 'Ashish', '1990-02-03', 'Bihar', 'araria', '2016-05-06 06:52:01', '2016-05-06 06:52:01'),
+(7, 'Sayan', '1990-02-04', 'West Bengal', 'alipurduar', '2016-05-06 06:52:53', '2016-05-06 06:52:53'),
+(8, 'Mainak', '1990-04-04', 'West Bengal', 'alipurduar', '2016-05-06 06:53:20', '2016-05-06 06:53:20'),
+(9, 'Saurav', '1990-04-05', 'West Bengal', 'alipurduar', '2016-05-06 06:54:35', '2016-05-06 06:54:35'),
+(10, 'Parimal', '1991-02-02', 'West Bengal', 'bankura', '2016-05-06 06:55:31', '2016-05-06 06:55:31'),
+(11, 'Manish', '1980-01-01', 'West Bengal', 'bankura', '2016-05-06 06:56:00', '2016-05-06 06:56:00'),
+(12, 'Vishal', '1991-04-04', 'West Bengal', 'bankura', '2016-05-06 06:56:38', '2016-05-06 06:56:38'),
+(13, 'Rupesh', '1975-01-01', 'Bihar', 'islampur', '2016-05-06 06:57:40', '2016-05-06 06:57:40'),
+(14, 'Patel', '1994-02-02', 'Bihar', 'islampur', '2016-05-06 06:57:57', '2016-05-06 06:57:57'),
+(15, 'Sohini', '1994-11-04', 'West Bengal', 'bardhaman', '2016-05-06 06:59:40', '2016-05-06 06:59:40'),
+(16, 'Shradha', '1994-03-15', 'West Bengal', 'bardhaman', '2016-05-06 07:00:56', '2016-05-06 07:00:56');
 
 -- --------------------------------------------------------
 
@@ -299,14 +331,62 @@ CREATE TABLE `voting_statuses` (
 --
 
 INSERT INTO `voting_statuses` (`id`, `voterid`, `electionid`, `status`, `token`, `Estatus`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1, 5, 0, NULL, NULL),
-(2, 2, 1, 5, 55786, 0, NULL, NULL),
-(3, 3, 1, 4, 56242, 0, NULL, NULL),
-(4, 4, 1, 0, 120, 0, NULL, NULL),
-(5, 5, 1, 0, 16, 1, NULL, NULL),
-(6, 6, 1, 0, 116, 0, NULL, NULL),
-(7, 7, 1, 0, 716, 0, NULL, NULL),
-(8, 8, 1, 0, 0, 0, NULL, NULL);
+(1, 7, 14, 0, 0, 0, '2016-05-06 03:15:36', '2016-05-06 03:15:36'),
+(2, 8, 14, 0, 0, 0, '2016-05-06 03:15:36', '2016-05-06 03:15:36'),
+(3, 9, 14, 0, 0, 0, '2016-05-06 03:15:36', '2016-05-06 03:15:36'),
+(4, 10, 14, 0, 0, 0, '2016-05-06 03:15:36', '2016-05-06 03:15:36'),
+(5, 11, 14, 0, 0, 0, '2016-05-06 03:15:36', '2016-05-06 03:15:36'),
+(6, 12, 14, 0, 0, 0, '2016-05-06 03:15:36', '2016-05-06 03:15:36'),
+(7, 15, 14, 0, 0, 0, '2016-05-06 03:15:37', '2016-05-06 03:15:37'),
+(8, 16, 14, 0, 0, 0, '2016-05-06 03:15:37', '2016-05-06 03:15:37'),
+(9, 1, 15, 0, 7260, 0, '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(10, 2, 15, 0, 14177, 0, '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(11, 3, 15, 0, 19301, 0, '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(12, 4, 15, 1, 47137, 0, '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(13, 5, 15, 0, 0, 0, '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(14, 6, 15, 0, 0, 0, '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(15, 13, 15, 0, 0, 0, '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(16, 14, 15, 0, 0, 0, '2016-05-06 03:16:33', '2016-05-06 03:16:33'),
+(17, 7, 16, 0, 0, 0, '2016-05-06 03:42:12', '2016-05-06 03:42:12'),
+(18, 8, 16, 0, 0, 0, '2016-05-06 03:42:13', '2016-05-06 03:42:13'),
+(19, 9, 16, 0, 0, 0, '2016-05-06 03:42:13', '2016-05-06 03:42:13'),
+(20, 10, 16, 0, 0, 0, '2016-05-06 03:42:13', '2016-05-06 03:42:13'),
+(21, 11, 16, 0, 0, 0, '2016-05-06 03:42:13', '2016-05-06 03:42:13'),
+(22, 12, 16, 0, 0, 0, '2016-05-06 03:42:13', '2016-05-06 03:42:13'),
+(23, 15, 16, 0, 0, 0, '2016-05-06 03:42:13', '2016-05-06 03:42:13'),
+(24, 16, 16, 0, 0, 0, '2016-05-06 03:42:13', '2016-05-06 03:42:13'),
+(25, 7, 17, 0, 0, 0, '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(26, 8, 17, 0, 0, 0, '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(27, 9, 17, 0, 0, 0, '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(28, 10, 17, 0, 0, 0, '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(29, 11, 17, 0, 0, 0, '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(30, 12, 17, 0, 0, 0, '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(31, 15, 17, 0, 0, 0, '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(32, 16, 17, 0, 0, 0, '2016-05-06 04:47:44', '2016-05-06 04:47:44'),
+(33, 7, 18, 0, 0, 0, '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(34, 8, 18, 0, 0, 0, '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(35, 9, 18, 0, 0, 0, '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(36, 10, 18, 0, 0, 0, '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(37, 11, 18, 0, 0, 0, '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(38, 12, 18, 0, 0, 0, '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(39, 15, 18, 0, 0, 0, '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(40, 16, 18, 0, 0, 0, '2016-05-06 05:45:57', '2016-05-06 05:45:57'),
+(41, 7, 19, 0, 0, 0, '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(42, 8, 19, 0, 0, 0, '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(43, 9, 19, 0, 0, 0, '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(44, 10, 19, 0, 0, 0, '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(45, 11, 19, 0, 0, 0, '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(46, 12, 19, 0, 0, 0, '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(47, 15, 19, 0, 0, 0, '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(48, 16, 19, 0, 0, 0, '2016-05-06 05:47:57', '2016-05-06 05:47:57'),
+(49, 7, 20, 0, 0, 0, '2016-05-06 07:24:43', '2016-05-06 07:24:43'),
+(50, 8, 20, 0, 0, 0, '2016-05-06 07:24:44', '2016-05-06 07:24:44'),
+(51, 9, 20, 0, 0, 0, '2016-05-06 07:24:44', '2016-05-06 07:24:44'),
+(52, 10, 20, 0, 0, 0, '2016-05-06 07:24:44', '2016-05-06 07:24:44'),
+(53, 11, 20, 0, 0, 0, '2016-05-06 07:24:44', '2016-05-06 07:24:44'),
+(54, 12, 20, 0, 0, 0, '2016-05-06 07:24:44', '2016-05-06 07:24:44'),
+(55, 15, 20, 0, 0, 0, '2016-05-06 07:24:44', '2016-05-06 07:24:44'),
+(56, 16, 20, 0, 0, 0, '2016-05-06 07:24:44', '2016-05-06 07:24:44');
 
 --
 -- Indexes for dumped tables
@@ -390,22 +470,22 @@ ALTER TABLE `voting_statuses`
 -- AUTO_INCREMENT for table `block_details`
 --
 ALTER TABLE `block_details`
-  MODIFY `blockid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `blockid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `constituency_block_details`
 --
 ALTER TABLE `constituency_block_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `constituency_details`
 --
 ALTER TABLE `constituency_details`
-  MODIFY `constituencyid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `constituencyid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `elections`
 --
 ALTER TABLE `elections`
-  MODIFY `electionid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `electionid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `users`
 --
@@ -415,12 +495,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `voter_details`
 --
 ALTER TABLE `voter_details`
-  MODIFY `voterid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `voterid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `voting_statuses`
 --
 ALTER TABLE `voting_statuses`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- Constraints for dumped tables
 --
@@ -437,7 +517,6 @@ ALTER TABLE `candidate_details`
 -- Constraints for table `constituency_block_details`
 --
 ALTER TABLE `constituency_block_details`
-  ADD CONSTRAINT `constituency_block_details_constituencyid_foreign` FOREIGN KEY (`constituencyid`) REFERENCES `constituency_details` (`constituencyid`),
   ADD CONSTRAINT `constituency_block_details_electionid_foreign` FOREIGN KEY (`electionid`) REFERENCES `elections` (`electionid`);
 
 --
