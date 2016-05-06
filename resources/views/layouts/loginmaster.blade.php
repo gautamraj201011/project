@@ -9,6 +9,7 @@
 <body >
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
+        <ul class="nav navbar-nav"> <li><img src="http://cliparts.co/cliparts/yck/o57/ycko57xcE.png" style="width:80px;height:80px;" align="left" ></li></ul>
         <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/elections/create">Election</a></li></ul>
         <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/candidate/create">Candidate Registration</a></li></ul>
         <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/voter/create">Voter Registration</a></li></ul>
@@ -28,7 +29,7 @@
             .form-group
             {padding: 20px;
                 border-radius: 20px;
-                background-color:lightskyblue;
+                background-color: #ffa876;
                 max-width: 50%;
                 max-height: 100%;
             }
@@ -36,7 +37,7 @@
             .ashish
             {padding: 20px;
                 border-radius: 20px;
-                background-color:lightskyblue;
+                background-color:#ffa876;
                 max-width: 50%;
                 max-height: 100%;
                 border-color: #0A0B0D;
@@ -59,7 +60,7 @@
 
             body{
 
-                background: #7ab8ff;
+                background-image: url("http://localhost/project/images/back.jpg");
             }
 
 

@@ -6,6 +6,8 @@
 
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
+            <ul class="nav navbar-nav"> <li><img src="http://cliparts.co/cliparts/yck/o57/ycko57xcE.png" style="width:80px;height:80px;" align="left" ></li></ul>
+
             <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public">Home</a></li></ul>
         </div>
 
