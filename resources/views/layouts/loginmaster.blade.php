@@ -41,7 +41,12 @@
                 max-height: 100%;
                 border-color: #0A0B0D;
             }
+            body{
 
+                background-image: image("background.jpg");
+
+
+            }
 
 
         </style>

@@ -62,6 +62,11 @@
                 text-align: left;
             }
 
+            body{
+
+                background: #7ab8ff;
+            }
+
         </style>
     <h1 ><u>ONLINE VOTING SYSTEM</u></h1>
 @show
