@@ -8,6 +8,9 @@
 @endsection
 
 @section('content')
-    <h1>ADMIN</h1>
+    <div class="ashish">
+        <h1>WELCOME ADMIN</h1>
+    </div>
+
 
 @endsection

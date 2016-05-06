@@ -7,18 +7,18 @@
 
 </head>
 <body >
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top ">
     <div class="container">
         <ul class="nav navbar-nav"> <li><img src="http://cliparts.co/cliparts/yck/o57/ycko57xcE.png" style="width:80px;height:80px;" align="left" ></li></ul>
-        <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/elections/create">Election</a></li></ul>
+        <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/elections/create">Create Election</a></li></ul>
         <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/candidate/create">Candidate Registration</a></li></ul>
         <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/voter/create">Voter Registration</a></li></ul>
         <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/parties/create">Party Registration</a></li></ul>
-        <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/result/create">Result</a></li></ul>
+        <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/result/create">View Result</a></li></ul>
         <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/voterlist/create">Generate VoterList</a></li></ul>
 
-        <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/create_constituency/create">Constituency</a></li></ul>
-        <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public">Log Out</a></li></ul>
+        <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public/create_constituency/create">Create Constituency</a></li></ul>
+        <ul class="nav navbar-nav navbar-right"> <li><a href="http://localhost/project/public">Log Out</a></li></ul>
     </div>
 
 </nav>

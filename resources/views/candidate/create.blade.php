@@ -2,11 +2,11 @@
 @section('title', 'Voting Status')
 @section('sidebar')
     @parent
-
+    <h3><u>CANDIDATE REGISTERATION</u></h3><br>
 @endsection
 
 @section('content')
-    <h3 style="color:#D9853B";><u>CANDIDATE REGISTERATION</u></h3><br>
+
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">

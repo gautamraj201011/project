@@ -19,8 +19,12 @@
                 width: 40%;
             }
             body{
-                background-color: #ac8eff;
+
+                background-image: url("http://localhost/project/images/gautam.jpg");
+
             }
+
+
 
         </style>
 
@@ -29,15 +33,13 @@
     <body background="layouts/background.jpg">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
-
-            <ul class="nav navbar-nav"><li><a href="http://localhost/project/public/">Home</a></li></ul>
-            <ul class="nav navbar-nav"> <li><a href="login/create">Log In</a></li></ul>
-            <ul class="nav navbar-nav"> <li><a href="voting/create">Voting</a></li></ul>
+            <ul class="nav navbar-nav"> <li><img src="http://cliparts.co/cliparts/yck/o57/ycko57xcE.png" style="width:80px;height:80px;" align="left" ></li></ul>
+            <ul class="nav navbar-nav "><li><a href="http://localhost/project/public/">Home</a></li></ul>
+            <ul class="nav navbar-nav navbar-right"> <li><a href="login/create">Log In</a></li></ul>
+            <ul class="nav navbar-nav navbar-right"> <li><a href="voting/create">Voting</a></li></ul>
         </div>
     </nav>
 
-
-                <center><div class="title">ONLINE VOTING SYSTEM</div></center>
 
 
 
