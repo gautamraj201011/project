@@ -18,14 +18,12 @@
                 background-color:lightskyblue;
                 width: 40%;
             }
-            body{
-                background: url('http://img01.deviantart.net/05e3/i/2012/254/5/d/_hd__wood_theme_wallpaper_by_hiddenabilities-d5eevov.jpg') ;
-            }
+
         </style>
 
 
     </head>
-    <body>
+    <body background="layouts/background.jpg">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
 

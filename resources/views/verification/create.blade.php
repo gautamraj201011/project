@@ -41,7 +41,7 @@
         ),array('')) !!}
     </div>
     {!! Form::close() !!}
-    </div>
+
 
 @endsection
 

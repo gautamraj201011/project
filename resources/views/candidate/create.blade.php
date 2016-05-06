@@ -17,6 +17,11 @@
             </ul>
         </div>
     @endif
+
+
+
+
+
     {!! Form::open(
       array(
         'route' => 'candidate.store',
@@ -62,7 +67,8 @@
         )) !!}
     </div>
     {!! Form::close() !!}
-    </div><br>
+
+
     @endsection
 
 
