@@ -8,10 +8,11 @@
 @endsection
 
 @section('content')
+    <div class="ashish">
     <p><h1>CandidateID:{{$candidate->candidateid }} </h1>
     <h3> Candidate Name:{{$candidate->candidatename }} </h3>
     <h3> ElectionID:{{$candidate->electionid}}</h3></p>
     <h3> ConstituencyID:{{$candidate->constituencyid }} </h3>
     <h3> PartyID:{{$candidate->partyid}}</h3></p>
-
+    </div>
 @endsection

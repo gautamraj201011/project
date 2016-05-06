@@ -35,36 +35,29 @@
         array(
         'class'=>'form-control',
         'placeholder'=>'Year'
-        )) !!}</div><br>
-        <div class="form-group">
+        )) !!}
         {!! Form::label('DOB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('dob', null,
         array(
         'class'=>'form-control',
         'placeholder'=>'date'
-        )) !!}</div><br>
-        <div class="form-group">
+        )) !!}
         {!! Form::label('State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('state', null,
         array(
         'class'=>'form-control',
         'placeholder'=>'Name'
-        )) !!}</div><br>
-        <div class="form-group">
+        )) !!}
         {!! Form::label('Block&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('block', null,
         array(
         'class'=>'form-control',
         'placeholder'=>'name'
-        )) !!}</div><br/>
-
-    </div>
-
-    <div class="form-group">
+        )) !!}
         {!! Form::submit('Register!',
         array('class'=>'btn btn-primary'
         )) !!}
     </div>
     {!! Form::close() !!}
-    </div>
+
     @endsection

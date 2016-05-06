@@ -33,24 +33,20 @@
           array(
             'class'=>'form-control',
             'placeholder'=>'name'
-          )) !!} </div><br>
-    <div class="form-group">
+          )) !!}
         {!! Form::label('PartyName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('partyname', null,
           array(
             'class'=>'form-control',
             'placeholder'=>'name'
-          )) !!}</div><br>
-    <div class="form-group">
+          )) !!}
         {!! Form::label('Party Symbol &nbsp;') !!}
         {!! Form::text('partysymbol', null,
           array(
             'class'=>'form-control',
             'placeholder'=>'type'
           )) !!}
-    </div><br>
 
-    <div class="form-group">
         {!! Form::submit('ADD',
           array('class'=>'btn btn-primary'
         )) !!}

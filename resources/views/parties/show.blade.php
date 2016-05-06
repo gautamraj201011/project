@@ -12,7 +12,9 @@
 @endsection
 
 @section('content')
-    <p><h1>partyID:{{$parties->partyid }} </h1>
+    <div class="ashish">
+        <h1>partyID:{{$parties->partyid }} </h1>
        <h3> partyname:{{$parties->partyname }} </h3>
-       <h3> partysymbol:{{$parties->partysymbol}}</h3></p>
+       <h3> partysymbol:{{$parties->partysymbol}}</h3>
+    </div>
 @endsection

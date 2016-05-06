@@ -34,32 +34,28 @@
           array(
             'class'=>'form-control','readonly'=>'true',
             'placeholder'=>'id'
-          ))!!} </div><br>
-
-
-    <div class="form-group">
+          ))!!}
         {!! Form::label('Constituency Name   &nbsp;') !!}
         {!! Form::text('constituencyname', null ,
           array(
             'class'=>'form-control',
             'placeholder'=>'name'
           )) !!}
-    </div><br>
+
 
 
 
     {!! $blockList = App\BlockDetail::where('state',$state)->lists('block')  !!}
 
 
-    <div class="form-group">
+
         {!! Form::label('Blocks') !!}<br />
         {!! Form::select('blocks[]',
         $blockList,
         null,
         ['class' => 'form-control',
         'multiple' => 'multiple']) !!}
-    </div>
-    <div class="form-group">
+
         {!! Form::submit('ADD',
           array('class'=>'btn btn-primary'
         )) !!}

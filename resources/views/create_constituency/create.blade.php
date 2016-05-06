@@ -37,14 +37,7 @@
           array(
             'class'=>'form-control',
             'placeholder'=>'name'
-          )) !!} </div><br>
-
-
-
-
-
-
-    <div class="form-group">
+          )) !!}
         {!! Form::submit('ADD',
           array('class'=>'btn btn-primary'
         )) !!}

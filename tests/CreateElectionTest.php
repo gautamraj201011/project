@@ -16,18 +16,18 @@ class CreateElectionTest extends TestCase
         $this->assertTrue(true);
     }
 
-   /* public function testBasicExample()
+    public function testBasicExample()
     {
         $this->visit('/elections/create')
             ->select('2016', 'year')
             ->select('State', 'status')
-            ->select('Bihar', 'state')
+            ->select('West Bengal', 'state')
             ->type('2016-05-11', 'start')
             ->type('2016-05-13', 'end')
             ->press('Create')
             ->seePageIs('/elections');
     }
-   */
+   
      /*  public function testNewElectionCreate()
        {
            $this->visit('/elections/create')

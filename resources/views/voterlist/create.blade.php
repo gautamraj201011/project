@@ -36,9 +36,7 @@
             'placeholder'=>'name'
           )) !!}
 
-    </div>
 
-    <div class="form-group">
         {!! Form::submit('Generate',
           array('class'=>'btn btn-primary'
         ),array('')) !!}

@@ -16,5 +16,7 @@
 @endsection
 
 @section('content')
+    <div class="ashish">
     <p>Thank you!! Come again next time.</p>
+    </div>
 @endsection

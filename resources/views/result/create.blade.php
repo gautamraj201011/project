@@ -33,17 +33,14 @@
           array(
             'class'=>'form-control',
             'placeholder'=>'electionid'
-          )) !!}</div><br/>
-    <div class="form-group">
+          )) !!}
         {!! Form::label('ConstituencyID') !!}
         {!! Form::text('constituencyid', null,
           array(
             'class'=>'form-control',
             'placeholder'=>'type'
-          )) !!} </div><br/>
+          )) !!}
 
-    <div class="form-group">
-        <div class="form-group">
             {!! Form::submit('Create Election!',
               array('class'=>'btn btn-primary'
             )) !!}</div>

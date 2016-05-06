@@ -3,7 +3,7 @@
 @section('title', 'Voting Status')
 
 @section('sidebar')
-
+      @parent
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public">Home</a></li></ul>
@@ -41,9 +41,7 @@
             'placeholder'=>'voter id'
           )) !!}
 
-    </div>
 
-    <div class="form-group">
         {!! Form::label('Token No:') !!}
         {!! Form::text('token', null,
           array(
@@ -51,9 +49,6 @@
             'placeholder'=>'token no.'
           )) !!}
 
-    </div>
-
-    <div class="form-group">
         {!! Form::submit('ADD!',
           array('class'=>'btn btn-primary'
         ),array('')) !!}

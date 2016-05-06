@@ -14,10 +14,11 @@
 @endsection
 
 @section('content')
+    <div class="ashish">
 
     <h1>voterid  : {{$user->voterid }}</h1>
     <h3>token no: {{ $user->token}}</h3>
-
+        </div>
 
 
 @endsection

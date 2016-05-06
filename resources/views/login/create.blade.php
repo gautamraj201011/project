@@ -30,17 +30,13 @@
           array(
             'class'=>'form-control',
             'placeholder'=>'name'
-          )) !!} </div><br>
-    <div class="form-group">
+          )) !!}
         {!! Form::label('Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('password', null,
           array(
             'class'=>'form-control',
             'placeholder'=>'name'
-          )) !!}</div><br>
-
-
-    <div class="form-group">
+          )) !!}
         {!! Form::submit('ADD',
           array('class'=>'btn btn-primary'
         )) !!}

@@ -9,8 +9,10 @@
 @endsection
 
 @section('content')
+    <div class="ashish">
     <h1>thank you</h1>
     <p><h2>{{$voters->votername }} </h2>
     <h3> State:{{$voters->state}} </h3>
     <h3> Block:{{$voters->block}}</h3></p>
+    </div>
 @endsection

@@ -33,24 +33,20 @@
         {!! Form::select('status', array('State'=> 'STATE' ,'Union' =>'UNION')) !!}
 
         {!! Form::label('State') !!}
-        {!! Form::select('state', array('Bihar'=>'Bihar','West Bengal'=>'West Bengal','Odisa'=>'Odisa')) !!} </div><br/>
-    <div class="form-group">
+        {!! Form::select('state', array('Bihar'=>'Bihar','West Bengal'=>'West Bengal','Odisa'=>'Odisa')) !!}
         {!! Form::label('Start') !!}
         {!! Form::text('start', null,
           array(
             'class'=>'form-control',
             'placeholder'=>'YYYY-MM-DD',
-            'provider'=> 'Makzumi\Calendar\CalendarServiceProvider',
-          )) !!}</div><br/>
-    <div class="form-group">
+
+          )) !!}
         {!! Form::label('End') !!}
         {!! Form::text('end', null,
           array(
             'class'=>'form-control',
             'placeholder'=>'YYYY-MM-DD'
-          )) !!}</div><br>
-
-    <div class="form-group">
+          )) !!}
         <div class="form-group">
             {!! Form::submit('Create',
               array('class'=>'btn btn-primary'
