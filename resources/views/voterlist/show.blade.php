@@ -13,6 +13,11 @@
 
     <div class="ashish">
         <table>
+            <th>VoterId</th>
+            <th>VoterName</th>
+            <th>DOB</th>
+            <th>State</th>
+            <th>Block</th>
         @foreach($voters as $voter)
                 <tr>
          <td>   {!! $voter->voterid!!} </td>
@@ -21,7 +26,6 @@
           <td>  {!! $voter->state!!}  </td>
           <td>  {!! $voter->block!!}  </td>
      </tr>
-            <br>
 
         @endforeach
         </table>
