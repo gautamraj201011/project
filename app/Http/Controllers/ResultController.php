@@ -27,11 +27,16 @@ class ResultController extends Controller
             ]);
             $aa = $request->get('electionid');
             $bb = $request->get('constituencyid');
-            $user = DB::table('candidate_details')->where('vote', DB::raw("(select max(vote) from candidate_details where electionid=$aa and constituencyid=$bb)"))->first();
+            $user = DB::table('candidate_details')->where('electionid',$aa)->where('constituencyid',$bb)->get();
 
-            $party = DB::table('parties')->where('partyid', $user->partyid)->first();
 
-        }    catch (\Exception $e) {
+               
+
+
+
+            //$party = DB::table('parties')->where('partyid', $user->partyid)->first();
+
+        }  catch (\Exception $e) {
             Session::flash('message', 'Wrong Input');
             Session::flash('alert-class', 'alert-danger');
             return Redirect::to('http://localhost/project/public/result/create')->with('msg', ' Sorry something went worng. Please try again.');
@@ -39,6 +44,6 @@ class ResultController extends Controller
 
         }
          
-        return view('result.show',compact('user','party'));
+        return view('result.show',compact('user'));
     }
 }

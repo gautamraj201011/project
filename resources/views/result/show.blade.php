@@ -14,21 +14,25 @@
 @section('content')
     <div class="ashish">
         <table>
+
           <tr>  <th>CandidateID</th>
             <th>CandidateName</th>
             <th>Vote</th>
             <th>PartyID</th>
-            <th>Party</th></tr>
-          <h1><tr>
-                  <td>{{$user->candidateid}}</td>
-         <td>   {{$user->candidatename}}</td>
-                  <td>  {{$user->vote}}</td>
-          <td>  {{$user->partyid}}</td>
-          <td>  {{$party->partyname}}</td>
 
-<tr>
+              @foreach($user as $users)
+              <tr>
 
-        </h1> </p>
+                  <td>{{$users->candidateid}}</td>
+         <td>   {{$users->candidatename}}</td>
+                  <td>  {{$users->vote}}</td>
+          <td>  {{$users->partyid}}</td>
+
+
+</tr>
+            @endforeach
+</table>
+
 
     </div>
 @endsection

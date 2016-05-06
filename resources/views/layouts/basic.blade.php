@@ -46,7 +46,7 @@
 
             body{
 
-                background: #7ab8ff;
+                background-image: url("http://localhost/project/images/background.jpg");
             }
 
 

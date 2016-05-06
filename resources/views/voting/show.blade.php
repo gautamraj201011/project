@@ -34,14 +34,16 @@
             'placeholder'=>'voterid',
             'readonly'=>'true'
          )) !!}
-    </div>
+
     <table>
         <th>Candidate Id</th>
         <th>Candidate Name</th>
+        <th>Symbol</th>
         <th>Button</th>
     @foreach($kmr as $kmrs)
          <tr> <td> {{$kmrs->candidateid}} </td>
              <td> {{$kmrs->candidatename}} </td>
+             <td> <img src="http://localhost/project/images/{{$kmrs->partyid }}.jpg" width="50px" height="50px"></td>
              <td> {!! Form::radio('candidate', $kmrs->candidateid) !!} </td>
          </tr>
 
@@ -49,8 +51,9 @@
     </table>
 
 
-<br>
-    <div class="form-group">
+<br/>
+<br/>
+
         {!! Form::submit('VOTE',
           array('class'=>'btn btn-primary'
         ),array('')) !!}
