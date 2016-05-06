@@ -40,20 +40,10 @@
                 border: 2px solid skyblue;
                 border-collapse: collapse;
             }
-            td {width:400px;
-                margin: 5px;
-                padding-left:5%;
-                padding: 10px;
-                text-align: left;
-            }
-            .sex{border: 10px;
-                width: 100%;
-                height: 6em;}
 
-            table {
-                border: 2px solid black;
-                border-collapse: collapse;
-            }
+
+
+
             td,th{ border: 2px solid black;
                 width:20%;
                 margin: 5px;
@@ -66,6 +56,7 @@
 
                 background: #7ab8ff;
             }
+
 
         </style>
     <h1 ><u>ONLINE VOTING SYSTEM</u></h1>

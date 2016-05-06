@@ -35,7 +35,7 @@ class LoginController extends Controller
         }
         
         else
-            return view('login.show');
+            return view('login.create');
 
      }
 

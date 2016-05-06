@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    <p><h3>Enter Election ID</h3></p>
+    <p><h3>Generate Voter List</h3></p>
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -33,10 +33,10 @@
         {!! Form::text('electionid', null,
           array(
             'class'=>'form-control',
-            'placeholder'=>'name'
+            'placeholder'=>'id'
           )) !!}
 
-
+<br/>
         {!! Form::submit('Generate',
           array('class'=>'btn btn-primary'
         ),array('')) !!}

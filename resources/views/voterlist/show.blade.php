@@ -1,12 +1,12 @@
 
-@extends('layouts.master')
+@extends('layouts.loginmaster')
 
 @section('title', 'Voting Status')
 
 @section('sidebar')
 
     @parent
-    <p>Successfully Registered</p>
+    <h3>VoterList</h3>
 @endsection
 
 @section('content')

@@ -8,7 +8,8 @@
 @endsection
 
 @section('content')
-    <p><h3>Enter Voter ID and Token</h3></p>
+    <h3>Verification</h3>
+    <p><h3>Enter Voter ID</h3></p>
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -35,8 +36,8 @@
             'class'=>'form-control',
             'placeholder'=>'name'
           )) !!}
-
-        {!! Form::submit('ADD!',
+<br/>
+        {!! Form::submit('VERIFY!',
           array('class'=>'btn btn-primary'
         ),array('')) !!}
     </div>

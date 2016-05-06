@@ -31,21 +31,25 @@
         {!! Form::text('voterid', $user->voterid ,
           array(
             'class'=>'form-control',
-            'placeholder'=>'voterid'
+            'placeholder'=>'voterid',
+            'readonly'=>'true'
          )) !!}
     </div>
-
+    <table>
+        <th>Candidate Id</th>
+        <th>Candidate Name</th>
+        <th>Button</th>
     @foreach($kmr as $kmrs)
-        <p>   <h1>{{$kmrs->candidateid}}.
-            {{$kmrs->candidatename}}
-            {!! Form::radio('candidate', $kmrs->candidateid) !!}
+         <tr> <td> {{$kmrs->candidateid}} </td>
+             <td> {{$kmrs->candidatename}} </td>
+             <td> {!! Form::radio('candidate', $kmrs->candidateid) !!} </td>
+         </tr>
 
-        </h1> </p>
     @endforeach
+    </table>
 
 
-
-
+<br>
     <div class="form-group">
         {!! Form::submit('VOTE',
           array('class'=>'btn btn-primary'

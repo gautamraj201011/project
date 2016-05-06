@@ -6,7 +6,7 @@
 
 @section('sidebar')
     @parent
-    <h3><u>Add Party</u></h3>
+    <h3><u>Create Constituency</u></h3>
 @endsection
 
 @section('content')
@@ -36,9 +36,10 @@
         {!! Form::text('electionid', null,
           array(
             'class'=>'form-control',
-            'placeholder'=>'name'
+            'placeholder'=>'id'
           )) !!}
-        {!! Form::submit('ADD',
+        <br/>
+        {!! Form::submit('CREATE',
           array('class'=>'btn btn-primary'
         )) !!}
     </div>

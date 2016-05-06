@@ -2,7 +2,7 @@
 
 
 
-@extends('layouts.master')
+@extends('layouts.loginmaster')
 
 @section('title', 'Voting Status')
 
@@ -13,7 +13,9 @@
 
 @section('content')
     <div class="ashish">
-    <h3> Year:{{$elections->year }} </h3>
-    <h3> state:{{$elections->state}}</h3></p>
+        <table>
+    <h3><tr><td> Year:</td> <td>{{$elections->year }}</td></tr> </h3>
+    <h3><tr> <td>state:</td> <td>{{$elections->state}}</td></tr></h3>
+        </table>
     </div>
 @endsection

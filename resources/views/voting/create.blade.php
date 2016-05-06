@@ -3,17 +3,18 @@
 @section('title', 'Voting Status')
 
 @section('sidebar')
-      @parent
+
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public">Home</a></li></ul>
         </div>
 
     </nav>
-
+    @parent
 @endsection
 
 @section('content')
+    <h3>VOTING</h3>
     <p><h3>Enter Voter ID and Token</h3></p>
 
     {!! Form::open(
@@ -48,8 +49,8 @@
             'class'=>'form-control',
             'placeholder'=>'token no.'
           )) !!}
-
-        {!! Form::submit('ADD!',
+<br/>
+        {!! Form::submit('ENTER!',
           array('class'=>'btn btn-primary'
         ),array('')) !!}
     </div>

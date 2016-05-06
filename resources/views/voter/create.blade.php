@@ -6,7 +6,7 @@
 
 @section('sidebar')
     @parent
-    <p font="bold">!!VOTER REGISTERATION!!</p><br>
+    <h3>!!VOTER REGISTERATION!!</h3><br>
 @endsection
 
 @section('content')
@@ -34,26 +34,23 @@
         {!! Form::text('votername', null,
         array(
         'class'=>'form-control',
-        'placeholder'=>'Year'
+        'placeholder'=>'name'
         )) !!}
         {!! Form::label('DOB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
-        {!! Form::text('dob', null,
-        array(
-        'class'=>'form-control',
-        'placeholder'=>'date'
-        )) !!}
+            {!! Form::date('dob', \Carbon\Carbon::create(), array(
+        'class'=>'form-control'))!!}
         {!! Form::label('State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('state', null,
         array(
         'class'=>'form-control',
-        'placeholder'=>'Name'
+        'placeholder'=>'state'
         )) !!}
         {!! Form::label('Block&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('block', null,
         array(
         'class'=>'form-control',
-        'placeholder'=>'name'
-        )) !!}
+        'placeholder'=>'block'
+        )) !!} <br/>
         {!! Form::submit('Register!',
         array('class'=>'btn btn-primary'
         )) !!}

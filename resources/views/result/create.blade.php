@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <h1 font="bold">Create Election</h1>
+    <h1 font="bold">View Result</h1>
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -38,10 +38,10 @@
         {!! Form::text('constituencyid', null,
           array(
             'class'=>'form-control',
-            'placeholder'=>'type'
+            'placeholder'=>'id'
           )) !!}
-
-            {!! Form::submit('Create Election!',
+<br/>
+            {!! Form::submit('VIEW!',
               array('class'=>'btn btn-primary'
             )) !!}</div>
     </div>

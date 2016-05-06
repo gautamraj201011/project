@@ -2,7 +2,7 @@
 
 
 
-@extends('layouts.master')
+@extends('layouts.loginmaster')
 
 @section('title', 'Voting Status')
 
@@ -13,8 +13,9 @@
 
 @section('content')
     <div class="ashish">
-        <h1>partyID:{{$parties->partyid }} </h1>
-       <h3> partyname:{{$parties->partyname }} </h3>
-       <h3> partysymbol:{{$parties->partysymbol}}</h3>
-    </div>
+        <table>
+        <h1><tr><td>PartId:</td><td>{{$parties->partyid }}</td> </tr> </h1>
+       <h3> <tr><td>partyname:</td><td>{{$parties->partyname }}</td> </tr> </h3>
+       <h3> <tr><td>partysymbol:</td><td>{{$parties->partysymbol}}</td> </tr></h3>
+        </table></div>
 @endsection

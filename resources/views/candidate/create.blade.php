@@ -7,7 +7,7 @@
 
 @section('content')
     <h3 style="color:#D9853B";><u>CANDIDATE REGISTERATION</u></h3><br>
-    <h3><u>Candidate Registration</u></h3>
+
     @if (count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
@@ -61,8 +61,8 @@
             'class'=>'form-control',
             'placeholder'=>'id'
           )) !!}
-
-        {!! Form::submit('ADD!',
+<br/>
+        {!! Form::submit('REGISTER!',
           array('class'=>'btn btn-primary'
         )) !!}
     </div>

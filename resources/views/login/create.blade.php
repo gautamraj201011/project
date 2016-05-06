@@ -16,7 +16,7 @@
 @endsection
 
 @section('content')
-<h3> </h3>
+<h3> Log In</h3>
     {!! Form::open(
       array(
        'route' => 'login.store',
@@ -29,15 +29,16 @@
         {!! Form::text('username', null,
           array(
             'class'=>'form-control',
-            'placeholder'=>'name'
+            'placeholder'=>'username'
           )) !!}
         {!! Form::label('Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('password', null,
           array(
             'class'=>'form-control',
-            'placeholder'=>'name'
+            'placeholder'=>'password'
           )) !!}
-        {!! Form::submit('ADD',
+        <br/>
+        {!! Form::submit('LOG IN',
           array('class'=>'btn btn-primary'
         )) !!}
     </div>

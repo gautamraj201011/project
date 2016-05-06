@@ -15,9 +15,12 @@
 
 @section('content')
     <div class="ashish">
-
-    <h1>voterid  : {{$user->voterid }}</h1>
-    <h3>token no: {{ $user->token}}</h3>
+<table>
+  <tr><td> voterid  :</td>
+      <td> {{$user->voterid }}</td> </tr>
+    <tr> <td> token no:</td>
+        <td>{{ $user->token}}</td> </tr>
+</table>
         </div>
 
 

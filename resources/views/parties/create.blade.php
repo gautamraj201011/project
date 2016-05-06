@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <h1>Create Party</h1>
+
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -32,7 +32,7 @@
         {!! Form::text('partyid', null,
           array(
             'class'=>'form-control',
-            'placeholder'=>'name'
+            'placeholder'=>'id'
           )) !!}
         {!! Form::label('PartyName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
         {!! Form::text('partyname', null,
@@ -44,9 +44,9 @@
         {!! Form::text('partysymbol', null,
           array(
             'class'=>'form-control',
-            'placeholder'=>'type'
+            'placeholder'=>'symbol'
           )) !!}
-
+<br/>
         {!! Form::submit('ADD',
           array('class'=>'btn btn-primary'
         )) !!}

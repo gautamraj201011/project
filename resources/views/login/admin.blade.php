@@ -8,6 +8,6 @@
 @endsection
 
 @section('content')
-    <p>
+    <h1>ADMIN</h1>
 
 @endsection

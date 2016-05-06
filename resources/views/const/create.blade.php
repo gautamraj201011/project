@@ -55,7 +55,7 @@
         null,
         ['class' => 'form-control',
         'multiple' => 'multiple']) !!}
-
+<br/>
         {!! Form::submit('ADD',
           array('class'=>'btn btn-primary'
         )) !!}

@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <h1>Create Party</h1>
+
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -35,18 +35,11 @@
         {!! Form::label('State') !!}
         {!! Form::select('state', array('Bihar'=>'Bihar','West Bengal'=>'West Bengal','Odisa'=>'Odisa')) !!}
         {!! Form::label('Start') !!}
-        {!! Form::text('start', null,
-          array(
-            'class'=>'form-control',
-            'placeholder'=>'YYYY-MM-DD',
-
-          )) !!}
+        {!! Form::date('start', \Carbon\Carbon::create(), array(
+    'class'=>'form-control'))!!}
         {!! Form::label('End') !!}
-        {!! Form::text('end', null,
-          array(
-            'class'=>'form-control',
-            'placeholder'=>'YYYY-MM-DD'
-          )) !!}
+        {!! Form::date('end', \Carbon\Carbon::create(), array(
+     'class'=>'form-control'))!!}
         <div class="form-group">
             {!! Form::submit('Create',
               array('class'=>'btn btn-primary'

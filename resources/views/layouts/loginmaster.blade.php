@@ -41,12 +41,27 @@
                 max-height: 100%;
                 border-color: #0A0B0D;
             }
+            table {
+                border: 2px solid skyblue;
+                border-collapse: collapse;
+            }
+
+
+
+
+            td,th{ border: 2px solid black;
+                width:20%;
+                margin: 5px;
+                padding-left:5%;
+                padding: 10px;
+                text-align: left;
+            }
+
             body{
 
-                background-image: image("background.jpg");
-
-
+                background: #7ab8ff;
             }
+
 
 
         </style>
