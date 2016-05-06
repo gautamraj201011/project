@@ -16,7 +16,7 @@
 @endsection
 
 @section('content')
-
+<h3> </h3>
     {!! Form::open(
       array(
        'route' => 'login.store',

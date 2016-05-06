@@ -18,6 +18,9 @@
                 background-color:lightskyblue;
                 width: 40%;
             }
+            body{
+                background-color: #ac8eff;
+            }
 
         </style>
 
