@@ -46,7 +46,9 @@ class VerificationController extends Controller
                }
                else
                {
-                   return 'oops';
+                   Session::flash('message', 'Already Voted');
+                   //Session::flash('alert-class', 'alert-danger');
+                   return Redirect::to('http://localhost/project/public/verification/create');
                }
 
 
