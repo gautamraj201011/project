@@ -1,9 +1,15 @@
-@extends('layouts.master')
+@extends('layouts.basic')
 
 @section('title', 'Voting Status')
 
 @section('sidebar')
-    @parent
+
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav"> <li><a href="http://localhost/project/public">Home</a></li></ul>
+        </div>
+
+    </nav>
 
 @endsection
 

@@ -32,6 +32,6 @@ class CreateVotingStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('voting_statuses');
+       
     }
 }

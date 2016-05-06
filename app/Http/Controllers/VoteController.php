@@ -26,11 +26,11 @@ class VoteController extends Controller
     {
        $candidate =$request->get('candidate');
         $voter=$request->get('voterid');
-       // $candidates = DB::table('candidate_details')->where('candidateid', $candidate)->first();
-       // DB::table('candidate_details')->where('candidateid', $candidate)->update(array('vote' => $candidates->vote+1));
+       $candidates = DB::table('candidate_details')->where('candidateid', $candidate)->first();
+        DB::table('candidate_details')->where('candidateid', $candidate)->update(array('vote' => $candidates->vote+1));
         $voters = DB::table('voting_statuses')->where('voterid', $voter)->first();
         //return $voters->status;
-        DB::table('voting_statuses')->where('voterid', $voters->voterid)->update(array('status' => $voters->status+1));
+        DB::table('voting_statuses')->where('voterid', $voters->voterid)->update(array('status' => 1));
         DB::table('voting_statuses')->where('voterid', $voters->voterid)->update(array('token' => $voters->token+rand()));
         //return $voters->status;
         return view('vote.show');

@@ -12,6 +12,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Contracts\Validation\ValidationException;
+use App\VotingStatus;
 
 class ElectionsController extends Controller
 {
@@ -41,15 +42,32 @@ class ElectionsController extends Controller
         $elections->state = $request->get('state');
         $elections->start = $request->get('start');
         $elections->end = $request->get('end');
-       // $elections->save();
-       // return view('elections.show', compact('elections'));
-          return $elections->state;
+        $elections->save();
+          //$query = DB::table('elections')->where('elec',)->first();
+
+          $state = DB::table('elections')->where('electionid',$elections->id)->first();
+
+          $voters = DB::table('voter_details')->where('state',$state->state)->get();
+
+          foreach($voters as $voter){
+
+              $entry = new VotingStatus();
+              $entry->voterid=$voter->voterid;
+              $entry->electionid = $elections->id;
+              $entry->status=0;
+              $entry->token=0;
+              $entry->Estatus=0;
+              $entry->save();
+          }
+        
+
+         // return $elections->state;
     }catch (\Exception $e) {
         Session::flash('message', 'Invalid Input, Try again');
         Session::flash('alert-class', 'alert-danger');
         return Redirect::to('http://localhost/project/public/elections/create');
     }
-
+        return view('elections.show', compact('elections'));
     }
 
 }

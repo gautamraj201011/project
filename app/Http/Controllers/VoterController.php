@@ -36,7 +36,7 @@ class VoterController extends Controller
                 'dob' => 'required',
                 'state' => 'required',
                 'block' => 'required',
-                'voterid' => 'required',
+                
             ]);
             $voters = new VoterDetail();
             $voters->votername = $request->get('votername');

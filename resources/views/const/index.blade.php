@@ -1,12 +1,12 @@
 
 
-@extends('layouts.loginmaster')
+@extends('layouts.master')
 
-@section('title', 'Voting Status')
+@section('title', 'Create')
 
 @section('sidebar')
     @parent
-    <h3><u>Add Party</u></h3>
+    <h3><u>Add Constituecy</u></h3>
 @endsection
 
 @section('content')
@@ -25,11 +25,20 @@
 
     {!! Form::open(
       array(
-        'route' => 'create_constituency.store',
+        'route' => 'const.index',
         'class' => 'form')
       ) !!}
 
-
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            There were some problems adding the category.<br />
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li></li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <div class="form-group">
         {!! Form::label('Election ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
@@ -39,7 +48,14 @@
             'placeholder'=>'name'
           )) !!} </div><br>
 
-
+    <div class="form-group">
+        {!! Form::label('Constituency Name &nbsp;') !!}
+        {!! Form::text('constituencyname', null,
+          array(
+            'class'=>'form-control',
+            'placeholder'=>'type'
+          )) !!}
+    </div><br>
 
 
 

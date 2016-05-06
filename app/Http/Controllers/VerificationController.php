@@ -26,6 +26,11 @@ class VerificationController extends Controller
 
         try{
 
+            $this->validate($request, [
+                'voterid' => 'required',
+                
+            ]);
+            
             $voters =$request->get('voterid');
             $user = DB::table('voting_statuses')->where('voterid', $voters)->first();
             $aa=$user->Estatus;
@@ -37,7 +42,7 @@ class VerificationController extends Controller
                {
                    DB::table('voting_statuses')->where('voterid', $voters)->update(array('token' => $user->token+rand()));
                    $user = DB::table('voting_statuses')->where('voterid', $voters)->first();
-                   return "VoterID:".$user->voterid."<br>TokenNO:".$user->token;
+                   return view('verification.show',compact('user'));
                }
                else
                {
@@ -55,7 +60,7 @@ class VerificationController extends Controller
             } catch (\Exception $e) {
             Session::flash('message', 'Wrong Input');
             Session::flash('alert-class', 'alert-danger');
-            return Redirect::to('http://localhost/project/public/voting/create')->with('msg', ' Sorry something went worng. Please try again.');
+            return Redirect::to('http://localhost/project/public/verification/create')->with('msg', ' Sorry something went worng. Please try again.');
         }
     }
 

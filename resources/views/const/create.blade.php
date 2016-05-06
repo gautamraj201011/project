@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.loginmaster')
 
 @section('title', 'Create Constituency')
 
@@ -13,7 +13,7 @@
 
     {!! Form::open(
       array(
-        'route' => 'constituency.store',
+        'route' => 'const.store',
         'class' => 'form')
       ) !!}
 
@@ -30,15 +30,16 @@
 
     <div class="form-group">
         {!! Form::label('ElectionID   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
-        {!! Form::text('electionid', $cons->electionid,
+        {!! Form::text('electionid', $id,
           array(
-            'class'=>'form-control',
+            'class'=>'form-control','readonly'=>'true',
             'placeholder'=>'id'
-          )) !!} </div><br>
+          ))!!} </div><br>
+
 
     <div class="form-group">
-        {!! Form::label('Constituency Id   &nbsp;') !!}
-        {!! Form::text('constituencyid', $app->constituencyid ,
+        {!! Form::label('Constituency Name   &nbsp;') !!}
+        {!! Form::text('constituencyname', null ,
           array(
             'class'=>'form-control',
             'placeholder'=>'name'
@@ -46,10 +47,10 @@
     </div><br>
 
 
-    {!! $blockList = App\BlockDetail::where('stateid','1')->lists('block')  !!}
 
-{!! $cons->electionid !!}
-    {!! $cons->constituencyname !!}
+    {!! $blockList = App\BlockDetail::where('state',$state)->lists('block')  !!}
+
+
     <div class="form-group">
         {!! Form::label('Blocks') !!}<br />
         {!! Form::select('blocks[]',

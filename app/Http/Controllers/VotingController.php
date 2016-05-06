@@ -30,7 +30,8 @@ class VotingController extends Controller
             $check = DB::table('voting_statuses')->where('voterid', $voters)->first();
 
             if ($tokens != $check->token) {
-                return 'oops';
+                Session::flash('message', 'Invalid Token');
+                return Redirect::to('http://localhost/project/public/voting/create');
             } else {
 
                 try {

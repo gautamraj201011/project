@@ -19,13 +19,8 @@
         <div class="container">
 
             <ul class="nav navbar-nav"><li><a href="http://localhost/project/public/">Home</a></li></ul>
-            <ul class="nav navbar-nav"> <li><a href="elections/create">Election</a></li></ul>
-            <ul class="nav navbar-nav"> <li><a href="candidate/create">Candidate Registration</a></li></ul>
-            <ul class="nav navbar-nav"> <li><a href="voter/create">Voter Registration</a></li></ul>
-            <ul class="nav navbar-nav"> <li><a href="parties/create">Party Registration</a></li></ul>
+            <ul class="nav navbar-nav"> <li><a href="login/create">Log In</a></li></ul>
             <ul class="nav navbar-nav"> <li><a href="voting/create">Voting</a></li></ul>
-            <ul class="nav navbar-nav"> <li><a href="verification/create">Verification</a></li></ul>
-            <ul class="nav navbar-nav"> <li><a href="result/create">Result</a></li></ul>
         </div>
     </nav>
 

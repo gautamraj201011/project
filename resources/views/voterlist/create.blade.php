@@ -1,15 +1,14 @@
-
-
 @extends('layouts.loginmaster')
 
-@section('title', 'Voting Status')
+@section('title', 'Voter List')
 
 @section('sidebar')
     @parent
-    <h3><u>Add Party</u></h3>
+
 @endsection
 
 @section('content')
+    <p><h3>Enter Election ID</h3></p>
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -21,34 +20,34 @@
         </div>
     @endif
 
-
-
     {!! Form::open(
-      array(
-        'route' => 'create_constituency.store',
-        'class' => 'form')
-      ) !!}
+  array(
+    'route' => 'voterlist.store',
+    'class' => 'form')
+  ) !!}
 
 
 
     <div class="form-group">
-        {!! Form::label('Election ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}
+        {!! Form::label('Election ID:') !!}
         {!! Form::text('electionid', null,
           array(
             'class'=>'form-control',
             'placeholder'=>'name'
-          )) !!} </div><br>
+          )) !!}
 
-
-
-
-
+    </div>
 
     <div class="form-group">
-        {!! Form::submit('ADD',
+        {!! Form::submit('Generate',
           array('class'=>'btn btn-primary'
-        )) !!}
+        ),array('')) !!}
     </div>
     {!! Form::close() !!}
     </div>
+
 @endsection
+
+
+
+

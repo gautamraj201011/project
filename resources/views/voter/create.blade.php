@@ -1,4 +1,6 @@
-@extends('layouts.master')
+
+
+@extends('layouts.loginmaster')
 
 @section('title', 'Voting Status')
 
@@ -8,6 +10,16 @@
 @endsection
 
 @section('content')
+
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     {!! Form::open(
  array(
  'route' => 'voter.store',

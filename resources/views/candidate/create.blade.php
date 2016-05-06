@@ -1,29 +1,39 @@
-@extends('layouts.master')
+@extends('layouts.loginmaster')
 @section('title', 'Voting Status')
 @section('sidebar')
     @parent
-
+    <style>
+        .form-group
+        {padding: 20px;
+            border-radius: 20px;
+            background-color:lightskyblue;
+            width: 40%;
+        }
+        body{
+            background: url('http://img01.deviantart.net/05e3/i/2012/254/5/d/_hd__wood_theme_wallpaper_by_hiddenabilities-d5eevov.jpg') ;
+        }
+    </style>
 @endsection
 
 @section('content')
+    <h3 style="color:#D9853B";><u>CANDIDATE REGISTERATION</u></h3><br>
     <h3><u>Candidate Registration</u></h3>
-
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     {!! Form::open(
       array(
         'route' => 'candidate.store',
         'class' => 'form')
       ) !!}
 
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            There were some problems adding the category.<br />
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li></li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+
 
     <div class="form-group">
         {!! Form::label('CandidateID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') !!}

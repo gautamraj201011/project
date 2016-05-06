@@ -1,5 +1,4 @@
-
-@extends('layouts.master')
+@extends('layouts.basic')
 
 @section('title', 'Voting Status')
 
@@ -34,14 +33,14 @@
             'class'=>'form-control',
             'placeholder'=>'voterid'
          )) !!}
-        </div>
+    </div>
 
     @foreach($kmr as $kmrs)
-     <p>   <h1>{{$kmrs->candidateid}}.
-        {{$kmrs->candidatename}}
-         {!! Form::radio('candidate', $kmrs->candidateid) !!}
+        <p>   <h1>{{$kmrs->candidateid}}.
+            {{$kmrs->candidatename}}
+            {!! Form::radio('candidate', $kmrs->candidateid) !!}
 
-     </h1> </p>
+        </h1> </p>
     @endforeach
 
 
@@ -57,4 +56,3 @@
 
 
 @endsection
-

@@ -1,12 +1,12 @@
 
-@foreach($user as $users)
-    <p>   <h1>{{$users->candidateid}}.
-        {{$users->candidatename}}.
-        {{$users->vote}}
-
+    <p>   <h1>{{$user->candidateid}}.
+        {{$user->candidatename}}.
+        {{$user->vote}}
+        {{$user->partyid}}
+        {{$party->partyname}}
 
 
 
     </h1> </p>
-@endforeach
+
 

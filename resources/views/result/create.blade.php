@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.loginmaster')
 @section('title', 'Voting Status')
 @section('sidebar')
     @parent
@@ -8,22 +8,24 @@
 @section('content')
     <h1 font="bold">Create Election</h1>
 
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+
     {!! Form::open(
       array(
         'route' => 'result.store',
         'class' => 'form')
       ) !!}
 
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            There were some problems adding the category.<br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li></li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+
 
     <div class="form-group">
         {!! Form::label('ElectionID') !!}

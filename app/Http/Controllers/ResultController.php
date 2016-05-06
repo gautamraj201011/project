@@ -19,10 +19,26 @@ class ResultController extends Controller
 
     public function  store(Request $request)
     {
-        $aa =$request->get('electionid');
-        $bb =$request->get('constituencyid');
-        $user = DB::table('candidate_details')->where('vote', DB::raw("(select max(vote) from candidate_details where electionid=$aa and constituencyid=$bb)"))->get();
-        
-        return view('result.show',compact('user'));
+        try {
+            $this->validate($request, [
+                'electionid' => 'required',
+                'constituencyid' =>'required'
+
+            ]);
+            $aa = $request->get('electionid');
+            $bb = $request->get('constituencyid');
+            $user = DB::table('candidate_details')->where('vote', DB::raw("(select max(vote) from candidate_details where electionid=$aa and constituencyid=$bb)"))->first();
+
+            $party = DB::table('parties')->where('partyid', $user->partyid)->first();
+
+        }    catch (\Exception $e) {
+            Session::flash('message', 'Wrong Input');
+            Session::flash('alert-class', 'alert-danger');
+            return Redirect::to('http://localhost/project/public/result/create')->with('msg', ' Sorry something went worng. Please try again.');
+
+
+        }
+         
+        return view('result.show',compact('user','party'));
     }
 }

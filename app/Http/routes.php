@@ -25,8 +25,10 @@ Route::resource('test','TestController');
 Route::resource('vote','VoteController');
 Route::resource('verification','VerificationController');
 Route::resource('result','ResultController');
-Route::resource('constituency','ConstituencyController');
-Route::resource('create_constituency','CreateConstituencyController');
+Route::resource('create_constituency','PreConstController');
+Route::resource('const','ConstController');
+Route::resource('voterlist','GenerateVoterListController');
+Route::resource('login','LoginController');
 //commit 4
 
 

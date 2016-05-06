@@ -1,9 +1,5 @@
-
-
-@extends('layouts.master')
-
+@extends('layouts.loginmaster')
 @section('title', 'Voting Status')
-
 @section('sidebar')
     @parent
     <h3><u>Add Party</u></h3>
